@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Heart Failure Prediction - Site</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{  url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{  url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{  url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{  url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{  url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{  url_for('static', filename='vendor/aremixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{  url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/solid.css"
+    integrity="sha384-DhmF1FmzR9+RBLmbsAts3Sp+i6cZMWQwNTRsew7pO/e4gvzqmzcpAzhDIwllPonQ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/fontawesome.css"
+    integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous" />
+
+  <!-- Chart JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous">
+  </script>
+
+  <!-- Template Main CSS File -->
+  <link href="{{  url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.3.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto">Heart Failure
+        Prediction</h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Explanation</a></li>
+          <li><a class="nav-link   scrollto" href="#portfolio">Chart</a></li>
+          <li><a class="nav-link   scrollto" href="#chartjs">Chart JS</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Prediction Section</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up">
+          <h1>Heart Failure Prediction Site</h1>
+          <h2>This project is to fulfill the task of course introduction to Python For Data Science</h2>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in">
+          <img src="{{  url_for('static', filename='img/heart_gif.gif') }}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Explanation
+            <br>
+            <div class="mt-3 text-black-50" style="font-size:15px">
+              In this section, there is a description of the
+              abstract and also a
+              description
+              of the data.
+            </div>
+          </h2>
+
+        </div>
+
+        <div class="row content">
+          <nav>
+            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist"
+              style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, Arial, Helvetica, sans-serif;">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-abstract"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Abstract</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-data"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Data</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-objective"
+                type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Objective</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+
+            <!-- Abstract Content -->
+            <div class="tab-pane fade show active" id="nav-abstract" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="mt-4">
+                <p style='text-align: justify;'>
+                  Penyakit kardiovaskular (CVD) adalah penyebab kematian nomor 1 secara global, mengambil sekitar 17,9
+                  juta jiwa setiap tahun, yang menyumbang 31% dari semua kematian di seluruh dunia. Gagal jantung adalah
+                  peristiwa umum yang disebabkan oleh CVD dan dataset ini berisi 12 fitur yang dapat digunakan untuk
+                  memprediksi kematian akibat gagal jantung. </p>
+
+                <p style='text-align: justify;'>
+                  Sebagian besar penyakit kardiovaskular dapat dicegah dengan mengatasi faktor risiko perilaku seperti
+                  penggunaan tembakau, diet dan obesitas yang tidak sehat, aktivitas fisik dan penggunaan alkohol yang
+                  berbahaya menggunakan strategi di seluruh populasi.</p>
+
+                <p style='text-align: justify;'>
+                  Orang dengan penyakit kardiovaskular atau yang berada pada risiko kardiovaskular tinggi (karena adanya
+                  satu atau lebih faktor risiko seperti hipertensi, diabetes, hiperlipidaemia atau penyakit yang sudah
+                  mapan) memerlukan deteksi dini dan manajemen di mana model pembelajaran mesin dapat sangat membantu.
+                </p>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <div class="mt-4">
+                <p style='text-align: justify;'>
+                  Dataset yang digunakan yaitu <a href="https://www.kaggle.com/andrewmvd/heart-failure-clinical-data"
+                    style="text-decoration: none;"><b style="font-style: italic">Heart Failure Prediction</b></a> :
+                  <br><br>
+                  Dataset ini terdiri dari 13 atribut dengan 299 rows. Dalam kasus ini target dari hasil prediksi
+                  keselamatan pasien dari penyakit jantung adalah DEATH_EVENT atau kematian</p>
+
+                <ul style="text-transform: capitalize">
+                  <li>age: umur pasien</li>
+                  <li>anaemia: apakah ada pengurangan haemoglobin</li>
+                  <li>creatinine_phosphokinase: level enzim CPK dalam mcg/L</li>
+                  <li>diabetes: apakah pasien punya riwayat diabetes</li>
+                  <li>ejection_fraction: persentase darah yang meninggalkan jantung dalam persentasi di setiap kontraksi
+                    jantung</li>
+                  <li>high_blood_pressure: apakah pasien punya darah tinggi</li>
+                  <li>platelets: jumlah platelet di darah dalam kiloplatelets/mL</li>
+                  <li>serum_creatinine: level serum creatinine di darah dalam mg/dL</li>
+                  <li>serum_sodium: level serum sodium di darah dalam mEq/L</li>
+                  <li>sex: apakah pasien pria atau wanita</li>
+                  <li>smoking: apakah pasien merokok</li>
+                  <li>time: waktu dalam hari untuk follow-up</li>
+                  <li>DEATH_EVENT: apakah pasien sudah meninggal saat waktu follow-up</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-objective" role="tabpanel" aria-labelledby="nav-contact-tab">
+              <div class="mt-4">
+                <p>Objective yang ingin dicapai dalam analisis ini, yaitu:</p>
+                <ul style="text-transform: capitalize">
+                  <li>Mampu memahami konsep Classification dengan Ensemble Model</li>
+                  <li>Mampu mempersiapkan data untuk digunakan dalam Ensemble Model</li>
+                  <li>Mampu mengimplementasikan Ensemble Model untuk membuat prediksi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+
+
+    <!-- ======= Chart Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Chart</h2>
+          <p>A chart can represent tabular numeric data, functions or some kinds of quality structure and provides
+            different info.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up">
+          <li data-filter="*" class="filter-active">All Graphic Plot</li>
+          <li data-filter=".filter-app">Prediction Graph using the SMOTE method</li>
+          <li data-filter=".filter-card">Prediction Graph does not use the SMOTE method</li>
+          <li data-filter=".filter-web">Random Plot</li>
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <!-- Chart Section 1 -->
+          <div>
+            <!-- d-1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_etc.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Extra Trees Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- d-2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_knn.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>KNN Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- d-3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_svm.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>SVM Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- d-4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_rf.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>Random Forest Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- d-5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_logreg.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Logistic Regression Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- d-6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_xgboost.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>XGBooster Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- d-7 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/smote_gb.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Gradient Booster Classifier</h4>
+                <p>Dengan menggunakan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- end of chart section - section 1 -->
+          </div>
+
+          <!-- Chart Section 2 -->
+          <div>
+            <!-- a-1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/etc.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>Extra Trees Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- a-2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/knn.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>KNN Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- a-3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/svm.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>SVM Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- a-4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/rf.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>Random Forest Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- a-5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/logreg.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Logistic Regression Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- a-6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/xgboost.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>XGBooster Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- a-7 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/gb.png') }}"
+                  class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Gradient Booster Classifier</h4>
+                <p>Tidak menggunaan metode SMOTE</p>
+              </div>
+            </div>
+            <!-- end of chart section - section 2 -->
+          </div>
+
+          <!-- Chart Section 3 -->
+          <div>
+            <!-- b-1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/corr.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>Correlation Plot</h4>
+              </div>
+            </div>
+            <!-- b-2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-img"><img src="{{ url_for('static', filename='img/portfolio/hist_dist.png') }}"
+                  class="img-fluid" alt=""></div>
+              <div class="portfolio-info">
+                <h4>Distribution Plot</h4>
+              </div>
+            </div>
+            <!-- end of chart section - section 3 -->
+          </div>
+        </div>
+      </div>
+    </section><!-- End Chart Section -->
+
+    <!-- ======= Chart JS Section ======= -->
+    <section id="chartjs" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Chart Using "Chart JS" Framework
+            <br>
+            <div class="mt-3 text-black-50" style="font-size:15px">
+              This section will show some charts using the Chart JS framework
+            </div>
+          </h2>
+
+        </div>
+
+        <div class="row content">
+          <canvas id="pie-chart"></canvas>
+          <script>
+            var data = [{
+              data: [
+                49,
+                40,
+                37,
+                36,
+                34,
+                31,
+                21,
+                20,
+                18,
+                3,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1
+              ],
+              backgroundColor: [
+                "lime",
+                "olive",
+                "yellow",
+                "teal",
+                "aqua",
+                "navy",
+                "maroon",
+                "gray",
+                "cyan",
+                "coral",
+                "gold",
+                "indigo",
+                "lavender",
+                "linen",
+                "olive",
+                "pink",
+                "plum"
+              ],
+              borderColor: "#fff"
+            }];
+
+            var options = {
+              tooltips: {
+                enabled: true
+              },
+              title: {
+                display: true,
+                text: "Fraksi Ejeksi Pie Chart"
+              },
+              plugins: {
+                datalabels: {
+                  formatter: (value, ctx) => {
+
+                    let sum = ctx.dataset._meta[0].total;
+                    let percentage = (value * 100 / sum).toFixed(2) + "%";
+                    return percentage;
+
+
+                  },
+                  color: '#fff',
+                }
+              }
+            };
+
+
+            var ctx = document.getElementById("pie-chart").getContext('2d');
+            var myChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: [
+                  "Fraksi Ejeksi Value = 35",
+                  "Fraksi Ejeksi Value = 38",
+                  "Fraksi Ejeksi Value = 40",
+                  "Fraksi Ejeksi Value = 25",
+                  "Fraksi Ejeksi Value = 30",
+                  "Fraksi Ejeksi Value = 60",
+                  "Fraksi Ejeksi Value = 50",
+                  "Fraksi Ejeksi Value = 45",
+                  "Fraksi Ejeksi Value = 20",
+                  "Fraksi Ejeksi Value = 55",
+                  "Fraksi Ejeksi Value = 15",
+                  "Fraksi Ejeksi Value = 62",
+                  "Fraksi Ejeksi Value = 17",
+                  "Fraksi Ejeksi Value = 65",
+                  "Fraksi Ejeksi Value = 14",
+                  "Fraksi Ejeksi Value = 80",
+                  "Fraksi Ejeksi Value = 70"
+                ],
+                datasets: data
+              },
+              options: options
+            });
+          </script>
+        </div>
+        <div class="row content">
+          <div class="mt-4">
+
+            <div class="row">
+
+              <div class="col-lg-6">
+
+                <div>
+                  <canvas id="Chart2" style="width:100%;max-width:600px"></canvas>
+
+                  <script>
+                    var xValues = [
+                      "High Blood Pressure : 0",
+                      "High Blood Pressure : 1"
+                    ];
+                    var yValues = [
+                      105,
+                      194
+                    ];
+                    var barColors = ["red", "yellow"];
+
+                    new Chart("Chart2", {
+                      type: "bar",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {
+                          display: false
+                        },
+                        title: {
+                          display: true,
+                          text: "High Blood Pressure Chart"
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+
+              </div>
+
+              <div class="col-lg-6">
+
+                <div>
+                  <canvas id="Chart3" style="width:100%;max-width:600px"></canvas>
+                  <script>
+                    var xValues = [
+                      "Gender value : 1",
+                      "Gender value : 0"
+                    ];
+                    var yValues = [
+                      194,
+                      105
+                    ];
+                    var barColors = [
+                      "pink",
+                      "black"
+                    ];
+
+                    new Chart("Chart3", {
+                      type: "bar",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {
+                          display: false
+                        },
+                        title: {
+                          display: true,
+                          text: "Gender Chart"
+                        }
+                      }
+                    });
+                  </script>
+
+                </div>
+
+              </div>
+
+              <div class="col-lg-6">
+
+                <div>
+                  <canvas id="Chart4" style="width:100%;max-width:600px"></canvas>
+
+                  <script>
+                    var xValues = [
+                      "Death Value : 0",
+                      "Death Value : 1"
+                    ];
+                    var yValues = [
+                      203,
+                      96
+                    ];
+                    var barColors = ["black", "blue"];
+
+                    new Chart("Chart4", {
+                      type: "bar",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {
+                          display: false
+                        },
+                        title: {
+                          display: true,
+                          text: "Death Graph"
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+
+                <div>
+                  <canvas id="Chart5" style="width:100%;max-width:600px"></canvas>
+
+                  <script>
+                    var xValues = [
+                      "Smoking Value : 0",
+                      "Smoking Value : 1"
+                    ];
+                    var yValues = [
+                      203,
+                      96
+                    ];
+                    var barColors = ["black", "cyan"];
+
+                    new Chart("Chart5", {
+                      type: "bar",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {
+                          display: false
+                        },
+                        title: {
+                          display: true,
+                          text: "Smoking Graph"
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+            </div> <!-- end row -->
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End Chart JS Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>This group contains 3 certified independent study participants, namely:</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in">
+              <div class="pic"><img src="{{ url_for('static', filename='img/team/team-1.jpg') }}" class="img-fluid"
+                  alt=""></div>
+              <div class="member-info">
+                <h4>Ahmad Firdaus Zulva</h4>
+                <span>Studi Independen</span>
+                <p>PYTN-KS04-001</p>
+                <div class="social">
+                  <a href="https://github.com/zulvaaf"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/ahmadfirdauszulva111/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="{{ url_for('static', filename='img/team/team-3.jpg') }}" class="img-fluid"
+                  alt=""></div>
+              <div class="member-info">
+                <h4>Notasonda Soni Putra</h4>
+                <span>Studi Independen</span>
+                <p>PYTN-KS04-008</p>
+                <div class="social">
+                  <a href="https://github.com/soniputra"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/notasonda-soni-putra-728762195/"><i
+                      class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{{ url_for('static', filename='img/team/team-4.jpg') }}" class="img-fluid"
+                  alt=""></div>
+              <div class="member-info">
+                <h4>Windy Mega Melani</h4>
+                <span>Studi Independen</span>
+                <p>PYTN-KS04-003</p>
+                <div class="social">
+                  <a href="github.com/windymega/"><i class="fa-brands fa-github"></i></a>
+                  <a href="linkedin.com/in/windymega/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Prediction Section</h2>
+          <p>In this Heart Failure Prediction section will be using method, namely <b>Extra Trees Classifier</b>.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <h4>Hasil Prediksi</h4>
+                <p>{{ prediction_text }}</p>
+              </div>
+
+
+              <img src="{{ url_for('static', filename='img/heart_gif.gif') }}" class="img-fluid animated" alt="">
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="{{ url_for('predict')}}" method="post" class="php-email-form">
+              <div class="row">
+                <div class="form-group">
+                  <label for="usia">Age</label>
+                  <input type="number" class="form-control" name="usia" id="usia"
+                    placeholder="Insert value Age - Range (40 - 95)" required min="40" max="95">
+                </div>
+                <div class="form-group">
+                  <label for="anaemia">Anaemia</label>
+                  <select class="form-select" aria-label="Default select example" name="anaemia">
+                    <option selected>Choose for Anemia section</option>
+                    <option value="0">The patient does not have anemia</option>
+                    <option value="1">Patient has anemia</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="creatinin_fosfokinase">Creatinin Fosfokinase</label>
+                  <input type="number" class="form-control" name="creatinin_fosfokinase" id="creatinin_fosfokinase"
+                    placeholder="Insert value Creatinin Fosfokinase - Range (23 - 7861)" required min="23" max="7861">
+                </div>
+                <div class="form-group">
+                  <label for="diabetes">Diabetes</label>
+                  <select class="form-select" aria-label="Default select example" name="diabetes">
+                    <option selected>Choose for Diabetes section</option>
+                    <option value="0">Patient does not have diabetes</option>
+                    <option value="1">Patient has diabetes</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fraksi_ejeksi">Fraksi Ejeksi</label>
+                  <select class="form-select" aria-label="Default select example" name="fraksi_ejeksi">
+                    <option selected>Choose for Ejection Fraction section</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="17">17</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="38">38</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                    <option value="60">60</option>
+                    <option value="62">62</option>
+                    <option value="65">65</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="tekanan_darah_tinggi">High Blood Pressure</label>
+                  <select class="form-select" aria-label="Default select example" name="tekanan_darah_tinggi">
+                    <option selected>Choose for the High Blood Pressure section</option>
+                    <option value="0">The patient does not have high blood pressure</option>
+                    <option value="1">The patient has high blood pressure</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="platelets">Platelets</label>
+                  <input type="number" class="form-control" name="platelets" id="platelets"
+                    placeholder="Insert value Platelets - Range (25100 - 850000)" required min="25100" max="850000">
+                </div>
+                <div class="form-group">
+                  <label for="kreatinin_serum">Kreatinin Serum</label>
+                  <input type="number" class="form-control" name="kreatinin_serum" id="kreatinin_serum"
+                    placeholder="Insert value Kreatinin Serum - Range (0 - 10)" required min="0" max="10">
+                </div>
+                <div class="form-group">
+                  <label for="sodium_serum">Sodium Serum</label>
+                  <input type="number" class="form-control" name="sodium_serum" id="sodium_serum"
+                    placeholder="Insert value Sodium Serum - Range (113 - 148)" required min="113" max="148">
+                </div>
+                <div class="form-group">
+                  <label for="jenis_kelamin">Sex</label>
+                  <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
+                    <option selected>Choose for the Sex section</option>
+                    <option value="0">Perempuan</option>
+                    <option value="1">Laki-laki</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="perokok">Smoking</label>
+                  <select class="form-select" aria-label="Default select example" name="perokok">
+                    <option selected>Choose for Smoking section</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="time">Time</label>
+                  <input type="number" class="form-control" name="time" id="time"
+                    placeholder="Insert value Time - Range (4 - 285)" required min="4" max="285">
+                </div>
+                <div class="text-center"><button type="submit">Predict</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Re-design by : Soni, Zulva, Windy
+      </div>
+
+
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
